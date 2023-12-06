@@ -37,6 +37,44 @@ int deleteEnd()
         top--;
     }
 }
+
+int insertFirst(int val)
+{
+    int j,k;
+
+    if (top == -1)
+    {
+        a[++top] = val;
+    }
+    else if (top >= 4)
+    {
+        printf("\nStack is already full");
+    }
+    else
+    {
+        top++;
+        k = top - 1;
+
+        for (int i = top; i > 0; i--)
+        {
+            a[i] = a[k];
+            k--;
+        }
+        a[0] = val;
+    }
+}
+
+int deleteFirst()
+{
+    int j = 1;
+
+    if (top == -1)
+    {
+        printf("\nStack");
+    }
+    
+}
+
 int main() 
 {
     insertEnd(10);
