@@ -11,7 +11,6 @@ int bubleshoot(int arr[], int s)
         {
             if (arr[j] > arr[j + 1])
             {
-                //swap the elements of array
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
