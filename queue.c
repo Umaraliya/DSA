@@ -5,7 +5,7 @@ int a[n], f = -1, r = -1;
 
 int display()
 {
-    for (int i = f+1; i <= r; i++)
+    for (int i = f + 1; i <= r; i++)
     {
         printf("%d ",a[i]);
     }

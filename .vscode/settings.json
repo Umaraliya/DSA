@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "CAPI_SMA.C": "cpp"
+        "CAPI_SMA.C": "cpp",
+        "stdio.h": "c"
     }
 }
