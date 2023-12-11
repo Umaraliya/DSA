@@ -1,46 +1,6 @@
 #include<stdio.h>
 int a[50],f=-1,r=-1;
 
-int insertend()
-{
-    if(f==r && r==-1)
-    {
-        f++;
-        r++;
-        printf("Enter a value :");
-        scanf("%d",&a[r]);
-    }
-    else if(r>=4){
-        printf("Queue is already full\n");
-    }
-    else if(r<4)
-    {
-        r++;
-        printf("Enter a value :");
-        scanf("%d",&a[r]);
-    }
-}
-
-int deletefirst()
-{
-    if(f==r)
-    {
-        if(f!=-1){
-            f=r=-1;
-        }
-        else if(f==-1){
-            printf("Queue is already empty\n");
-        }
-    }
-    else if(f==-1){
-        printf("Queue is already empty\n");
-    }
-    else if(f>-1 && f<r){
-        f++;
-    }
-}
-
-
 int insertfirst(){
     if(r>=4)
     {
