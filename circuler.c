@@ -1,7 +1,6 @@
 #include<stdio.h>
 int a[5],f=-1,r=-1,n=5;
 
-
 int insertend()
 {
     if(f==r)
@@ -57,7 +56,6 @@ int deletefirst()
         printf("");
 }
 
-
 int display()
 {
     int i,s=f,k;
@@ -69,12 +67,11 @@ int display()
     }while(s!=r+1);
 }
 
-
   int main()
   {
     int i,s;
 
-printf("1)inseretend\n2)deletefirst\n3)exit\n");
+printf("1)insertend\n2)deletefirst\n3)exit\n");
 
 for(i=0;i<50;i++)
 {
