@@ -40,8 +40,8 @@ int deletefirst()
         }
         else if(f!=-1)
         {
-            f==-1;
-            r==-1;
+            f=-1;
+            r=-1;
             goto end;
         }
     }
@@ -64,7 +64,7 @@ int display()
     {
         printf("%d ",a[s]);
         s=(s+1)%n;
-    }while(s!=r+1);
+    }while(s!=(r+1)%n);
 }
 
   int main()
