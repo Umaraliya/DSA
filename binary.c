@@ -25,7 +25,6 @@ int binarysearch(int arr[], int k)
                     }
                 }
             }
-
             else if (arr[mid] < k)
             {
                 low = mid + 1;

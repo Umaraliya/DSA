@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int a[10], mid, end, start, l, r, x = 0, z = 0;
+int a[10], mid, end, start, j, r, x = 0, z = 0;
 int getdata()
 {
-    for (int i = 0; i < l; i++)
+    for (int i = 0; i < j; i++)
     {
-        printf("enter the %d number :", i + 1);
+        printf("enter the [%d] number :", i + 1);
         scanf("%d", &a[i]);
     }
 }
@@ -14,9 +14,9 @@ int arrange()
 {
     int b;
 
-    for (int i = 0; i < l; i++)
+    for (int i = 0; i < j; i++)
     {
-        for (int j = i + 1; j < l; j++)
+        for (int j = i + 1; j < j; j++)
         {
             if (a[i] > a[j])
             {
@@ -30,7 +30,7 @@ int arrange()
 
 int function(int s)
 {
-    if (mid >= 0 && mid <= l)
+    if (mid >= 0 && mid <= j)
     {
         if(z == mid)
         {
@@ -48,7 +48,7 @@ int function(int s)
         else if (a[mid] < s)
         {
             start = mid;
-            end =l;
+            end =j;
             z = mid;
             mid = (start + end) / 2;
 
@@ -72,7 +72,7 @@ int function(int s)
 
 int display()
 {
-    for (int i = 0; i < l; i++)
+    for (int i = 0; i < j; i++)
     {
         printf("%d ", a[i]);
     }
@@ -83,7 +83,7 @@ int main()
     int s;
 
     printf("Enter the length of the array :");
-    scanf("%d", &l);
+    scanf("%d", &j);
 
     getdata();
     arrange();
@@ -92,7 +92,7 @@ int main()
     printf("Enter a number to search :");
     scanf("%d", &s);
     start = 0;
-    end = l;
+    end = j;
     r = function(s);
     
     if (r == 1)
