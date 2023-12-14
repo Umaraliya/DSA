@@ -30,6 +30,8 @@ int arrange()
 
 int function(int s)
 {
+    z = mid;
+
     if (mid >= 0 && mid <= j)
     {
         if(z == mid)
@@ -49,7 +51,6 @@ int function(int s)
         {
             start = mid;
             end =j;
-            z = mid;
             mid = (start + end) / 2;
 
             return function(s);
@@ -58,16 +59,13 @@ int function(int s)
         {
             end = mid;
             start=0;
-            z = mid;
             mid = (start + end) / 2;
 
             return function(s);
         }
     }
     else
-    {
         return 0;
-    }
 }
 
 int display()
@@ -80,29 +78,24 @@ int display()
 
 int main()
 {
-    int s;
+    int s, end = j, start = 0;
 
     printf("Enter the length of the array :");
     scanf("%d", &j);
 
-    getdata();
-    arrange();
-    printf("\n");
 
     printf("Enter a number to search :");
     scanf("%d", &s);
-    start = 0;
-    end = j;
+    
+    getdata();
+    arrange();
+    
     r = function(s);
     
     if (r == 1)
-    {
         printf("Value is present in the Array ");
-    }
     else if (r == 0)
-    {
         printf("Value is not present in the Array ");
-    }
 
     return 0;
 }
