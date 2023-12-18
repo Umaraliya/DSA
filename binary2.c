@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int a[10], mid, end, start, j, r, x = 0, z = 0;
+    
 int getdata()
 {
     for (int i = 0; i < j; i++)
@@ -83,13 +84,12 @@ int main()
     printf("Enter the length of the array :");
     scanf("%d", &j);
 
-
     printf("Enter a number to search :");
     scanf("%d", &s);
     
     getdata();
     arrange();
-    
+
     r = function(s);
     
     if (r == 1)
