@@ -36,14 +36,14 @@ int main()
     // printf("\nD : data : %d, ch : %c", d.data, d.ch);
 
     a.ptr = &b;
-    printf("\nB : data : %d, ch : %c", a.ptr->data, a.ptr->ch);
+    printf("\nB : Data : %d, ch : %c", a.ptr->data, a.ptr->ch);
     
     b.ptr = &a;
-    printf("\nA : data : %d, ch : %c", b.ptr->data, b.ptr->ch);
+    printf("\nA : Data : %d, ch : %c", b.ptr->data, b.ptr->ch);
     
     c.ptr = &d;
-    printf("\nC : data : %d, ch : %c", c.ptr->data, c.ptr->ch);
+    printf("\nC : Data : %d, ch : %c", c.ptr->data, c.ptr->ch);
     
     d.ptr = &c;
-    printf("\nD : data : %d, ch : %c", d.ptr->data, d.ptr->ch);
+    printf("\nD : Data : %d, ch : %c", d.ptr->data, d.ptr->ch);
 }
