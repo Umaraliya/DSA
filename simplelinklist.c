@@ -9,6 +9,16 @@ struct node
 
 struct node *head = NULL;
 
+void insertFirst(int val)
+{
+    struct node *ptr = head;
+    struct node *temp = malloc(sizeof(struct node));
+    temp->data = val;
+    temp->next = head;
+    
+    head=temp;
+}
+
 void insertMiddle(int val)
 {
     struct node *ptr = head, *p;
@@ -72,18 +82,10 @@ void insertEnd(int val)
     return;
 }
 
-void insertFirst(int val)
-{
-    struct node *ptr = head;
-    struct node *temp = malloc(sizeof(struct node));
-    temp->data = val;
-    temp->next = head;
-    head=temp;
-}
 void deleteFirst()
 {
     struct node *ptr = head;
-    
+
     if (head == NULL)
     {
         printf("\nList is empty\n");
